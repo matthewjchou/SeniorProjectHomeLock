@@ -52,7 +52,7 @@ while True:
 	
 
 	for c in contours:
-		if cv2.contourArea(c)<450:
+		if cv2.contourArea(c) < 450:
 			movement = False	
 			continue
 		else:
@@ -83,12 +83,14 @@ while True:
 
 	elif not movement:
 		counter += 1
+
 		cv2.putText(delta, 'No Movement', (0,25), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,100,0), 3)
 		if counter == 3:
 			counter = 0
 			#IO.output(14, IO.LOW)
 
 	cv2.imshow('Feed', delta)
+	
 	cv2.waitKey(1)
 
 
