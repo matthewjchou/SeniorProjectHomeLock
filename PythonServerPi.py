@@ -85,8 +85,6 @@ while(True):
                 reponse = BROADCAST.recv(1024).decode("utf-8")
                 print(response)
 
-
-
         elif(data == 'stop'):
             CONNECTION.close()
             break;
